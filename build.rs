@@ -5,11 +5,7 @@ fn main() {
         }
     }
 
-    println!("cargo:rustc-flags=-l dylib=cassandra");
-    println!("cargo:rustc-flags=-l dylib=crypto");
-    println!("cargo:rustc-flags=-l dylib=ssl");
-    println!("cargo:rustc-flags=-l dylib=stdc++");
-    println!("cargo:rustc-flags=-l dylib=uv");
+    println!("cargo:rustc-flags=-l staticlib=cassandra_static");
     println!("cargo:rustc-link-search={}", "/usr/lib/x86_64-linux-gnu");
     println!("cargo:rustc-link-search={}", "/usr/local/lib/x86_64-linux-gnu");
     println!("cargo:rustc-link-search={}", "/usr/local/lib64");
